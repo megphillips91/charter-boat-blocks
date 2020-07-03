@@ -4,166 +4,335 @@
  * CSS for both Frontend+Backend.
  */
 
-.wp-block-cgb-block-charter-boats  {
-  background: $red;
-  border: 0.2rem solid $black;
-  color: $black;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem;
-}
-.cb-calendar-container {
-	position: relative;
+ .cb-product-listing a, .cb-calendar-container a {
+	border: none;
+	box-shadow: none;
+  }
+
+  /* styles for the charter booking functionality*/
+  .cb-hold-global-display .cb-calendar-container {
+	padding-top: 9px;
+  }
+
+  .cb-product-listing .cb-book-now-container .btn {
+	  font-family: sans-serif;
+	  display: inline-block;
+	  font-weight: bold;
+	  font-weight: 800;
+	  text-align: center;
+	  white-space: nowrap;
+	  vertical-align: middle;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	  border: 1px solid transparent;
+	  padding: .375rem .75rem;
+	  font-size: 1rem;
+	  line-height: 1.5;
+	  border-radius: .25rem;
+	  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+
+  .cb-product-listing .cb-book-now-container .btn-danger {
+	  color: #fff;
+	  background-color: #dc3545;
+	  border-color: #dc3545;
+  }
+
+  .cb-product-listing .cb-book-now-container .btn-danger:hover {
+	  color: #fff;
+	  background-color: #c82333;
+	  border-color: #bd2130;
+  }
+
+  .hold-products-listing, .hold-products-listing p{
 	font-family: sans-serif;
-	width: 90%;
+	color: #505050;
+  }
+
+  .cb-loading {
+	opacity: .5;
+  }
+
+  .single-product .cb-loading {
+	text-align: center;
+  }
+
+  .cb-fine-details-container p, .cb-book-now-container p {
+	margin: 0;
+	line-height: normal;
+  }
+
+  .hold-products-listing .cb-hd-3, .entry-content .hold-products-listing .cb-hd-3 {
+	font-size: 16px;
+	margin: 0 10px 0 0;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-weight: 800;
+  }
+
+  .cb-loading .cb-hd-3  {
+	font-family: sans-serif;
+	font-weight: bold;
+	font-weight: 800;
+	font-size: 14px;
+	margin: 0 inherit;
+  }
+
+  .single-product .cb-single-book-now-tab {
+	padding-left: 20px;
+	padding-right: 20px;
+  }
+
+   .cb-product-listing-nav a:not([href])  {
+	color: #c0c0c0;
+  }
+
+  .cb-product-listing-nav a:not([href]):hover {
+	color: #333;
+  }
+
+  .single-product .hold-product-listing .cb-product-listing-nav {
+	text-align: center;
+  }
+
+  .single-product .hold-product-listing {
+	padding-top: 0px;
+  }
+
+  .single-product .cb-single-book-now-tab .hold-product-listing {
+	padding-top: 0px;
+  }
+
+  .single-product .hold-product-listing .cb-hd-3 {
+	font-size: 16px;
+	line-height: 16px;
 	margin: 0 auto;
+  }
+  .single-product .hold-product-listing .cb-product-listing {
+	margin: 0;
+  }
+
+  .cb-product-listing-nav .cb-hd-3 {
+	font-weight: bold;
+	margin: 0 inherit;
+  }
+
+  .cb-product-listing-nav .btn {
+	padding: 0 20px;
+  }
+
+  .cb-list-products-headline {
+	padding: 0 20px
+  }
 
 
-	.cb-lazyload-global-calendar{
-		position: relative;
+
+
+  /* styles for product listings */
+
+  .cb-hold-global-display .cb-calendar-container, .cb-lazyload-global-calendar {
+	max-height: 215px;
+  }
+
+  /*all sizes*/
+  .cb-product-listing {
+	min-height: 100px;
+  }
+
+  .hold-products-listing a:not([href])  {
+   color: #c0c0c0;
+  }
+
+  .hold-products-listing a:not([href]):hover {
+   color: #333;
+  }
+
+  .cb-product-listing .weather_wrapper .weather-title {
+	font-size: 16 px;
+  }
+
+  .cb-product-listing-nav {
+	border: 1px solid #E1E2E7;
+	border-bottom: none;
+	margin: 0 auto;
+  }
+
+  .cb-product-listing .cb-fine-details-container div.weather_wrapper > div {
+	text-align: left;
+  }
+
+  .cb-product-listing {
+	border: 1px solid #E1E2E7;
+  }
+
+  .cb-disabled {
+	opacity: 0;
+  }
+
+  .cb-list-products-container {
+	padding: 0 20px 20px 20px;
+  }
+
+  .cb-list-products-container .cb-product-listing {
+	margin-bottom: 10px;
+  }
+
+  .cb-product-listing > div{
+	padding: 12px;
+  }
+
+  .cb-product-listing .subscript-size{
+	color: #C0C0C0;
+  }
+
+  .cb-product-listing p {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+  }
+
+  .cb-product-listing .cb-hd-2, .entry-content .cb-product-listing .cb-hd-2 {
+	color: #c82333;
+	line-height: 33px;
+	font-weight: bold;
+	font-weight: 800;
+	font-size: 16px;
+	margin: 0;
+  }
+
+  .cb-product-listing .cb-hd-3 {
+	margin: 0 inherit;
+  }
+
+  .cb-product-listing .cb-book-now-container .cb-price, .entry-content .cb-book-now-container .cb-hd-3{
+	font-size: 16px;
+	font-weight: bold;
+	font-weight: 800;
+	margin: 0 0 10px 0 ;
+  }
+
+  .cb-product-listing .cb-book-now-container .btn-danger {
+	font-family: sans-serif;
+	font-weight: bold;
+  }
+
+  /*mobile*/
+  @media (max-width: 767px){
+
+	.cb-list-products-headline {
+	  text-align: center;
 	}
 
-	.cb-lazyload-global-calendar {
-		min-height: 215px
+	.hold-products-listing .cb-hd-3, .entry-content .hold-products-listing .cb-hd-3 {
+	  margin: 50px 0 0 0;
 	}
 
-	table{
-		margin: 0;
+
+
+	.cb-product-listing .cb-fine-details-container .subscript-size{
+	  margin-top: 15px;
 	}
 
-	.cb-hold-calendar-loader {
-		display: block;
-		opacity: 0;
-		text-align: center;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: -100;
+	.cb-product-listing .cb-fine-details-container .cb-weather-container .subscript-size {
+	  margin-top: 0;
 	}
 
-	.current-date {
-		border: 3px solid #E1E2E7;
+	.cb-loading .cb-hd-2, .entry-content .cb-loading .cb-hd-2{
+	  line-height: normal;
+	  font-size: 18px;
+	  margin: 0;
 	}
 
-	.calendar-month a:not([href]) {
-		color: #c0c0c0;
-		}
-
-	.calendar-month a:not([href]):hover {
-			color: #333;
-			}
-
-	.clickable {
-		cursor: pointer
+	.cb-product-listing .cb-fine-details-container {
+	  display: flex;
+	  justify-content: space-between;
+	  flex-wrap: wrap;
+	}
+	.cb-product-listing .cb-fine-details-container div{
+	  flex-basis: 50%;
+	}
+	.cb-product-listing .cb-fine-details-container .weather-container{
+	  flex-basis: 100%;
 	}
 
-	.single-product .entry-summary .cb-calendar-container {
-		width: 100%;
+  }
+  /*desktops*/
+  @media (min-width: 767px) {
+
+	.cb-hold-global-display{
+	  display: flex;
 	}
 
-	.calendar-loading {
-		text-align: center;
+	.cb-hold-global-display > div {
+	  flex-basis: 70%;
 	}
 
-	ul {
-		margin: 0
+	.cb-hold-global-display div.cb-lazyload-global-calendar,   .cb-hold-global-display .cb-calendar-container {
+	  flex-basis: 30%;
 	}
 
-	.align-center {
-		text-align: center;
+	.cb-product-listing .cb-fine-details-container div {
+	  text-align: right;
 	}
 
-	table.calendar {
-		border-left: 1px solid #E1E2E7;
+	.cb-wrap-global-display {
+	  display: flex;
 	}
 
-	.ss-calendar tr, td.st-day {
-		padding: 0;
-		margin: 0;
-		border: none
+	.cb-wrap-global-display > div {
+	  flex-basis: 70%;
+	  margin: 0 20px;
 	}
 
-	td.calendar-day {
-		font-size: 11px;
+	.cb-wrap-global-display .cb-calendar-container {
+	  flex-basis: 30%;
+	  width: auto;
+	  margin: 0;
+	  min-height: 200px;
 	}
 
-	td.calendar-day-np {
-		background: #ffffff;
-		min-height: 80px;
+	.cb-product-listing {
+	  display: flex;
+	  justify-content: space-around;
 	}
 
-	div.calendar-day-np {
-		height: 80px;
+	.cb-product-listing .cb-details-container {
+	  flex-basis: 80%;
+	  border-right: 1px dashed #E1E2E7;
 	}
 
-	td.calendar-day, td.calendar-day-np {
-		background: #41BA8D;
-		padding: 5px;
-		border-bottom: 1px solid #E1E2E7;
-		border-right: 1px solid #E1E2E7;
+	.cb-product-listing .cb-book-now-container{
+	  flex-basis: 20%;
+	  text-align: right;
 	}
 
-	td.none, td.none:hover, td.calendar-day-np, td.calendar-day-np:hover {
-		background: #ffffff;
+	.cb-product-listing .cb-fine-details-container {
+	  margin: 0 30px;
+	  display: flex;
+	  justify-content: space-between;
 	}
 
-	.no-date {
-		background: #ffffff
+	.cb-product-listing .cb-fine-details-container div,
+	.cb-product-listing div {
+	  align-self: flex-end;
 	}
 
-	td a {
-		font-family: sans-serif;
-		display: block;
-		width: 100%;
-		text-decoration: none;
-	}
+  } /*end min 767*/
 
-	.calendar-month {
-		font-family: sans-serif;;
-		background: #ffffff;
-		font-weight: bold;
-		border: 1px solid #E1E2E7;
-		font-size: 16px;
-	}
+  .hold-products-listing .lazyload-product-listing {
+	border: 1px solid #E1E2E7;
+	min-height: 100px;
+	margin-bottom: 10px;
+	position: relative;
+	padding: 12px;
+  }
 
-	.calendar-month a {
-		cursor: pointer;
-		width: 10%;
-		padding: 0 20px;
-	}
-
-	td.calendar-day-head {
-		background: #ffffff;
-		font-weight: bold;
-		text-align: center;
-		width: 120px;
-		padding: 5px;
-		border-bottom: 1px solid #E1E2E7;
-		border-top: 1px solid #E1E2E7;
-		border-right: 1px solid #E1E2E7;
-		font-size: 10px;
-	}
-
-	span.day-number {
-		padding: 5px;
-		color: #333;
-		font-weight: bold;
-		margin: -5px -5px 0 0;
-		width: 27px;
-		text-align: center;
-	}
-
-	td.not-available, td.not-available:hover {
-		background: #E7B7B8
-	}
-
-	.calendar-row td {
-		height: 30px;
-	}
-
-	.charter_deets {
-		padding-left: 10px
-	}
-
-}
+  .hold-products-listing .lazyload-product-listing .cb-hd-3 {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+  }

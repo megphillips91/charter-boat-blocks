@@ -126,109 +126,272 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-cgb-block-charter-boats {
-  background: orangered;
-  border: 0.2rem solid #292929;
-  color: #292929;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem; }
+.cb-product-listing a, .cb-calendar-container a {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
 
-.cb-calendar-container {
-  position: relative;
+/* styles for the charter booking functionality*/
+.cb-hold-global-display .cb-calendar-container {
+  padding-top: 9px; }
+
+.cb-product-listing .cb-book-now-container .btn {
   font-family: sans-serif;
-  width: 90%;
+  display: inline-block;
+  font-weight: bold;
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out; }
+
+.cb-product-listing .cb-book-now-container .btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545; }
+
+.cb-product-listing .cb-book-now-container .btn-danger:hover {
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130; }
+
+.hold-products-listing, .hold-products-listing p {
+  font-family: sans-serif;
+  color: #505050; }
+
+.cb-loading {
+  opacity: .5; }
+
+.single-product .cb-loading {
+  text-align: center; }
+
+.cb-fine-details-container p, .cb-book-now-container p {
+  margin: 0;
+  line-height: normal; }
+
+.hold-products-listing .cb-hd-3, .entry-content .hold-products-listing .cb-hd-3 {
+  font-size: 16px;
+  margin: 0 10px 0 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-weight: 800; }
+
+.cb-loading .cb-hd-3 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-weight: 800;
+  font-size: 14px;
+  margin: 0 inherit; }
+
+.single-product .cb-single-book-now-tab {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.cb-product-listing-nav a:not([href]) {
+  color: #c0c0c0; }
+
+.cb-product-listing-nav a:not([href]):hover {
+  color: #333; }
+
+.single-product .hold-product-listing .cb-product-listing-nav {
+  text-align: center; }
+
+.single-product .hold-product-listing {
+  padding-top: 0px; }
+
+.single-product .cb-single-book-now-tab .hold-product-listing {
+  padding-top: 0px; }
+
+.single-product .hold-product-listing .cb-hd-3 {
+  font-size: 16px;
+  line-height: 16px;
   margin: 0 auto; }
-  .cb-calendar-container .cb-lazyload-global-calendar {
-    position: relative; }
-  .cb-calendar-container .cb-lazyload-global-calendar {
-    min-height: 215px; }
-  .cb-calendar-container table {
-    margin: 0; }
-  .cb-calendar-container .cb-hold-calendar-loader {
-    display: block;
-    opacity: 0;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    z-index: -100; }
-  .cb-calendar-container .current-date {
-    border: 3px solid #E1E2E7; }
-  .cb-calendar-container .calendar-month a:not([href]) {
-    color: #c0c0c0; }
-  .cb-calendar-container .calendar-month a:not([href]):hover {
-    color: #333; }
-  .cb-calendar-container .clickable {
-    cursor: pointer; }
-  .cb-calendar-container .single-product .entry-summary .cb-calendar-container {
-    width: 100%; }
-  .cb-calendar-container .calendar-loading {
+
+.single-product .hold-product-listing .cb-product-listing {
+  margin: 0; }
+
+.cb-product-listing-nav .cb-hd-3 {
+  font-weight: bold;
+  margin: 0 inherit; }
+
+.cb-product-listing-nav .btn {
+  padding: 0 20px; }
+
+.cb-list-products-headline {
+  padding: 0 20px; }
+
+/* styles for product listings */
+.cb-hold-global-display .cb-calendar-container, .cb-lazyload-global-calendar {
+  max-height: 215px; }
+
+/*all sizes*/
+.cb-product-listing {
+  min-height: 100px; }
+
+.hold-products-listing a:not([href]) {
+  color: #c0c0c0; }
+
+.hold-products-listing a:not([href]):hover {
+  color: #333; }
+
+.cb-product-listing .weather_wrapper .weather-title {
+  font-size: 16 px; }
+
+.cb-product-listing-nav {
+  border: 1px solid #E1E2E7;
+  border-bottom: none;
+  margin: 0 auto; }
+
+.cb-product-listing .cb-fine-details-container div.weather_wrapper > div {
+  text-align: left; }
+
+.cb-product-listing {
+  border: 1px solid #E1E2E7; }
+
+.cb-disabled {
+  opacity: 0; }
+
+.cb-list-products-container {
+  padding: 0 20px 20px 20px; }
+
+.cb-list-products-container .cb-product-listing {
+  margin-bottom: 10px; }
+
+.cb-product-listing > div {
+  padding: 12px; }
+
+.cb-product-listing .subscript-size {
+  color: #C0C0C0; }
+
+.cb-product-listing p {
+  margin: 0;
+  padding: 0;
+  font-size: 12px; }
+
+.cb-product-listing .cb-hd-2, .entry-content .cb-product-listing .cb-hd-2 {
+  color: #c82333;
+  line-height: 33px;
+  font-weight: bold;
+  font-weight: 800;
+  font-size: 16px;
+  margin: 0; }
+
+.cb-product-listing .cb-hd-3 {
+  margin: 0 inherit; }
+
+.cb-product-listing .cb-book-now-container .cb-price, .entry-content .cb-book-now-container .cb-hd-3 {
+  font-size: 16px;
+  font-weight: bold;
+  font-weight: 800;
+  margin: 0 0 10px 0; }
+
+.cb-product-listing .cb-book-now-container .btn-danger {
+  font-family: sans-serif;
+  font-weight: bold; }
+
+/*mobile*/
+@media (max-width: 767px) {
+  .cb-list-products-headline {
     text-align: center; }
-  .cb-calendar-container ul {
+  .hold-products-listing .cb-hd-3, .entry-content .hold-products-listing .cb-hd-3 {
+    margin: 50px 0 0 0; }
+  .cb-product-listing .cb-fine-details-container .subscript-size {
+    margin-top: 15px; }
+  .cb-product-listing .cb-fine-details-container .cb-weather-container .subscript-size {
+    margin-top: 0; }
+  .cb-loading .cb-hd-2, .entry-content .cb-loading .cb-hd-2 {
+    line-height: normal;
+    font-size: 18px;
     margin: 0; }
-  .cb-calendar-container .align-center {
-    text-align: center; }
-  .cb-calendar-container table.calendar {
-    border-left: 1px solid #E1E2E7; }
-  .cb-calendar-container .ss-calendar tr, .cb-calendar-container td.st-day {
-    padding: 0;
+  .cb-product-listing .cb-fine-details-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .cb-product-listing .cb-fine-details-container div {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; }
+  .cb-product-listing .cb-fine-details-container .weather-container {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; } }
+
+/*desktops*/
+@media (min-width: 767px) {
+  .cb-hold-global-display {
+    display: -ms-flexbox;
+    display: flex; }
+  .cb-hold-global-display > div {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%; }
+  .cb-hold-global-display div.cb-lazyload-global-calendar, .cb-hold-global-display .cb-calendar-container {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%; }
+  .cb-product-listing .cb-fine-details-container div {
+    text-align: right; }
+  .cb-wrap-global-display {
+    display: -ms-flexbox;
+    display: flex; }
+  .cb-wrap-global-display > div {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    margin: 0 20px; }
+  .cb-wrap-global-display .cb-calendar-container {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    width: auto;
     margin: 0;
-    border: none; }
-  .cb-calendar-container td.calendar-day {
-    font-size: 11px; }
-  .cb-calendar-container td.calendar-day-np {
-    background: #ffffff;
-    min-height: 80px; }
-  .cb-calendar-container div.calendar-day-np {
-    height: 80px; }
-  .cb-calendar-container td.calendar-day, .cb-calendar-container td.calendar-day-np {
-    background: #41BA8D;
-    padding: 5px;
-    border-bottom: 1px solid #E1E2E7;
-    border-right: 1px solid #E1E2E7; }
-  .cb-calendar-container td.none, .cb-calendar-container td.none:hover, .cb-calendar-container td.calendar-day-np, .cb-calendar-container td.calendar-day-np:hover {
-    background: #ffffff; }
-  .cb-calendar-container .no-date {
-    background: #ffffff; }
-  .cb-calendar-container td a {
-    font-family: sans-serif;
-    display: block;
-    width: 100%;
-    text-decoration: none; }
-  .cb-calendar-container .calendar-month {
-    font-family: sans-serif;
-    background: #ffffff;
-    font-weight: bold;
-    border: 1px solid #E1E2E7;
-    font-size: 16px; }
-  .cb-calendar-container .calendar-month a {
-    cursor: pointer;
-    width: 10%;
-    padding: 0 20px; }
-  .cb-calendar-container td.calendar-day-head {
-    background: #ffffff;
-    font-weight: bold;
-    text-align: center;
-    width: 120px;
-    padding: 5px;
-    border-bottom: 1px solid #E1E2E7;
-    border-top: 1px solid #E1E2E7;
-    border-right: 1px solid #E1E2E7;
-    font-size: 10px; }
-  .cb-calendar-container span.day-number {
-    padding: 5px;
-    color: #333;
-    font-weight: bold;
-    margin: -5px -5px 0 0;
-    width: 27px;
-    text-align: center; }
-  .cb-calendar-container td.not-available, .cb-calendar-container td.not-available:hover {
-    background: #E7B7B8; }
-  .cb-calendar-container .calendar-row td {
-    height: 30px; }
-  .cb-calendar-container .charter_deets {
-    padding-left: 10px; }
+    min-height: 200px; }
+  .cb-product-listing {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .cb-product-listing .cb-details-container {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    border-right: 1px dashed #E1E2E7; }
+  .cb-product-listing .cb-book-now-container {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    text-align: right; }
+  .cb-product-listing .cb-fine-details-container {
+    margin: 0 30px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .cb-product-listing .cb-fine-details-container div,
+  .cb-product-listing div {
+    -ms-flex-item-align: end;
+        align-self: flex-end; } }
+
+/*end min 767*/
+.hold-products-listing .lazyload-product-listing {
+  border: 1px solid #E1E2E7;
+  min-height: 100px;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 12px; }
+
+.hold-products-listing .lazyload-product-listing .cb-hd-3 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
