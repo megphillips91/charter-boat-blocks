@@ -75,14 +75,26 @@ function charter_boats_cgb_block_assets() { // phpcs:ignore
 	 * @since 1.16.0
 	 */
 	register_block_type(
-		'cgb/block-charter-boats', array(
+		'cgb/block-charter-boats-calendar', array(
 			// Enqueue blocks.style.build.css on both frontend & backend.
 			'style'         => 'charter_boats-cgb-style-css',
 			// Enqueue blocks.build.js in the editor only.
 			'editor_script' => 'charter_boats-cgb-block-js',
 			// Enqueue blocks.editor.build.css in the editor only.
 			'editor_style'  => 'charter_boats-cgb-block-editor-css',
-			'render_callback'=> 'render_block_charter_boats'
+			'render_callback'=> 'render_block_charter_boats_calendar'
+		)
+	);
+
+	register_block_type(
+		'cgb/block-charter-boats-listing', array(
+			// Enqueue blocks.style.build.css on both frontend & backend.
+			'style'         => 'charter_boats-cgb-style-css',
+			// Enqueue blocks.build.js in the editor only.
+			'editor_script' => 'charter_boats-cgb-block-js',
+			// Enqueue blocks.editor.build.css in the editor only.
+			'editor_style'  => 'charter_boats-cgb-block-editor-css',
+			'render_callback'=> 'render_block_charter_boats_listing'
 		)
 	);
 }
@@ -90,9 +102,16 @@ function charter_boats_cgb_block_assets() { // phpcs:ignore
 // Hook: Block assets.
 add_action( 'init', 'charter_boats_cgb_block_assets' );
 
-function render_block_charter_boats($attributes){
+function render_block_charter_boats_calendar($attributes){
 	$content = '<h3>Availability Calendar</h3>';
 	$content .= $attributes['calendar'];
+	return $content;
+}
+
+function render_charter_boat_listing($attributes){
+	$content = '<h3>Listing</h3>';
+	//$return = $attributes['charters'];
+	//$content .= $return['html'];
 	return $content;
 }
 
