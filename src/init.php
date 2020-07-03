@@ -110,8 +110,8 @@ function render_block_charter_boats_calendar($attributes){
 
 function render_block_charter_boats_listing($attributes){
 	$content = '<h3>Listing</h3>';
-	//$return = $attributes['charters'];
-	//$content .= $return['html'];
+	$return = $attributes['charters'];
+	$content .= $return['html'];
 	return $content;
 }
 
