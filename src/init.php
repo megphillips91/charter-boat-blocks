@@ -103,13 +103,13 @@ function charter_boats_cgb_block_assets() { // phpcs:ignore
 add_action( 'init', 'charter_boats_cgb_block_assets' );
 
 function render_block_charter_boats_calendar($attributes){
-	$content = $attributes['calendar'];
+	$content = '<div class="remote-charterboat-calendar" charterboat_domain="'.$attributes['domain'].'" >'.$attributes['calendar'].'</div>';
 	return $content;
 }
 
 function render_block_charter_boats_listing($attributes){
 	$return = $attributes['charters'];
-	$content = $return['html'];
+	$content ='<div class="remote-charterboat-charters" charterboat_domain="'.$attributes['domain'].'" >'.$return['html'].'</div>';
 	return $content;
 }
 
