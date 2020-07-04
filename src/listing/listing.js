@@ -12,6 +12,7 @@ import axios from 'axios';
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
+const { BaseControl, Spinner, TextControl } = wp.components;
 
 /**
  * Register: aa Gutenberg Block.
@@ -40,11 +41,14 @@ registerBlockType( 'cgb/block-charter-boats-listing', {
 		charters: {
 			type: 'string',
 		},
+		domain: {
+			type: 'string',
+		},
 	},
 
 	edit: ( props ) => {
-		if ( ! props.attributes.charters ) {
-			const url = 'https://phillipsboatworks.com/wp-json/charter-bookings-pro/global_availability';
+		if ( ! props.attributes.charters && props.attributes.domain ) {
+			const url = props.attributes.domain + 'wp-json/charter-bookings-pro/global_availability';
 			//create user
 			axios.get( url )
 				.then( ( res ) => {
@@ -53,14 +57,49 @@ registerBlockType( 'cgb/block-charter-boats-listing', {
 					} );
 				} );
 		}
+		function createMarkup() {
+			return { __html: props.attributes.charters.html };
+		}
+		function onChangeDomain( e ) {
+			props.setAttributes( { domain: e.target.value } );
+		}
 		// Creates a <p class='wp-block-cgb-block-charter-boat'></p>.
-		return (
-			// eslint-disable-next-line react/jsx-no-undef
-			<div>Charter List</div>
-		);
+		if ( ! props.attributes.charters ) {
+			return (
+				// eslint-disable-next-line react/jsx-no-undef
+				<React.Fragment>
+					<Spinner />
+					<BaseControl label="Remote Charterboat Domain" id="charterboat-listing-domain" help="copy and paste the url of the homepage of the charterboat">
+						<TextControl
+							type="url"
+							id="charterboat-listing-domain"
+							value={ props.attributes.domain }
+							onBlur={ e => onChangeDomain( e ) }>
+						</TextControl>
+					</BaseControl>
+				</React.Fragment>
+			);
+		}
+		if ( props.attributes.charters ) {
+			return (
+				// eslint-disable-next-line react/jsx-no-undef
+				<React.Fragment>
+					<BaseControl label="Charterboat Domain" id="charterboat-listing-domain" >
+						<TextControl
+							type="url"
+							id="charterboat-listing-domain"
+							value={ props.attributes.domain }
+							onBlur={ e => onChangeDomain( e ) }>
+						</TextControl>
+					</BaseControl>
+					<div dangerouslySetInnerHTML={ createMarkup() } />
+				</React.Fragment>
+			);
+		}
 	},
 
 	save: ( ) => {
 		return null;
 	},
 } );
+
