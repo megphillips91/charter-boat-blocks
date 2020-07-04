@@ -21,3 +21,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Block Initializer.
  */
 require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
+/**
+ * Adding plugin wide JQuery
+ */
+/*
+function charter_boat_blocks_includes_scripts(){
+   wp_enqueue_script( 'charter_boat_block_scripts',plugin_dir_url( __FILE__ ).'charter-boat-blocks.js', array( 'jquery' ),'',true );
+   wp_localize_script( 'charter_boat_block_scripts', 'charter_boat_vars',
+	   array(
+		   'admin_ajax'=>admin_url( 'admin-ajax.php' ),
+		   'home'=>site_url(),
+	   )
+
+   );
+}
+//add_action( 'wp_enqueue_scripts', 'charter_boat_blocks_includes_scripts' );
