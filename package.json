@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@wordpress/api-fetch": "^3.18.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cgb-scripts": "1.23.0"
   }
 }
